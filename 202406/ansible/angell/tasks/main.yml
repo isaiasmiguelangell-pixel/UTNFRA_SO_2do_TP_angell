@@ -1,0 +1,25 @@
+---
+- name: "Crear directorios"
+  file:
+    path: "/tmp/2do_parcial/{{ item }}"
+    state: directory
+  with_items:
+    - "alumno"
+    - "equipo"
+
+- name: "Crear archivo datos_alumno"
+  template:
+    src: datos_alumno.j2
+    dest: /tmp/2do_parcial/alumno/datos_alumno.txt
+
+- name: "Crear archivo datos_equipo"
+  template:
+    src: datos_equipo.j2
+    dest: /tmp/2do_parcial/equipo/datos_equipo.txt
+
+- name: "Configurar sudoers para 2PSupervisores"
+  community.general.sudoers:
+    name: 2PSupervisores
+    group: 2PSupervisores
+    commands: ALL
+    nopassword: true

@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - include_role:
+        name: angell
+    
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+

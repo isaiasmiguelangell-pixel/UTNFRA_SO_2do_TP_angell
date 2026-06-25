@@ -1,0 +1,88 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-25 07:12:30,610 p=42656 u=angel n=ansible | - Role angell was created successfully
+2026-06-25 08:02:55,631 p=42680 u=angel n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-25 08:02:55,800 p=42680 u=angel n=ansible | PLAY [all] ******************************************************************************************************************************************
+2026-06-25 08:02:55,809 p=42680 u=angel n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2026-06-25 08:02:55,881 p=42680 u=angel n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nangel@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-25 08:02:56,512 p=42680 u=angel n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another
+Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-25 08:02:56,512 p=42680 u=angel n=ansible | ok: [localhost]
+2026-06-25 08:02:56,519 p=42680 u=angel n=ansible | TASK [include_role : 2do_parcial] *******************************************************************************************************************
+2026-06-25 08:02:56,533 p=42680 u=angel n=ansible | included: 2do_parcial for localhost
+2026-06-25 08:02:56,539 p=42680 u=angel n=ansible | TASK [2do_parcial : debug] **************************************************************************************************************************
+2026-06-25 08:02:56,544 p=42680 u=angel n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-25 08:02:56,554 p=42680 u=angel n=ansible | TASK [Otra tarea] ***********************************************************************************************************************************
+2026-06-25 08:02:56,559 p=42680 u=angel n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-25 08:02:56,559 p=42680 u=angel n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2026-06-25 08:02:56,559 p=42680 u=angel n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-25 08:02:56,559 p=42680 u=angel n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-25 08:05:16,474 p=42788 u=angel n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-25 08:05:16,561 p=42788 u=angel n=ansible | PLAY [localhost] ************************************************************************************************************************************
+2026-06-25 08:05:16,565 p=42788 u=angel n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2026-06-25 08:05:17,210 p=42788 u=angel n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another
+Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-25 08:05:17,210 p=42788 u=angel n=ansible | ok: [localhost]
+2026-06-25 08:05:17,216 p=42788 u=angel n=ansible | TASK [include_role : angell] ************************************************************************************************************************
+2026-06-25 08:05:17,248 p=42788 u=angel n=ansible | included: angell for localhost
+2026-06-25 08:05:17,253 p=42788 u=angel n=ansible | TASK [angell : Crear directorios] *******************************************************************************************************************
+2026-06-25 08:05:17,430 p=42788 u=angel n=ansible | changed: [localhost] => (item=alumno)
+2026-06-25 08:05:17,529 p=42788 u=angel n=ansible | changed: [localhost] => (item=equipo)
+2026-06-25 08:05:17,536 p=42788 u=angel n=ansible | TASK [angell : Crear archivo datos_alumno] **********************************************************************************************************
+2026-06-25 08:05:17,851 p=42788 u=angel n=ansible | changed: [localhost]
+2026-06-25 08:05:17,857 p=42788 u=angel n=ansible | TASK [angell : Crear archivo datos_equipo] **********************************************************************************************************
+2026-06-25 08:05:18,042 p=42788 u=angel n=ansible | changed: [localhost]
+2026-06-25 08:05:18,048 p=42788 u=angel n=ansible | TASK [angell : Configurar sudoers para 2PSupervisores] **********************************************************************************************
+2026-06-25 08:05:18,216 p=42788 u=angel n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "[Errno 13] Permission denied: '/etc/sudoers.d/2PSupervisores'"}
+2026-06-25 08:05:18,217 p=42788 u=angel n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2026-06-25 08:05:18,217 p=42788 u=angel n=ansible | localhost                  : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-25 08:06:45,730 p=43038 u=angel n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-25 08:06:45,818 p=43038 u=angel n=ansible | PLAY [localhost] ************************************************************************************************************************************
+2026-06-25 08:06:45,822 p=43038 u=angel n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************
+2026-06-25 08:06:46,608 p=43038 u=angel n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another
+Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-25 08:06:46,608 p=43038 u=angel n=ansible | ok: [localhost]
+2026-06-25 08:06:46,614 p=43038 u=angel n=ansible | TASK [include_role : angell] ************************************************************************************************************************
+2026-06-25 08:06:46,638 p=43038 u=angel n=ansible | included: angell for localhost
+2026-06-25 08:06:46,643 p=43038 u=angel n=ansible | TASK [angell : Crear directorios] *******************************************************************************************************************
+2026-06-25 08:06:46,825 p=43038 u=angel n=ansible | ok: [localhost] => (item=alumno)
+2026-06-25 08:06:46,937 p=43038 u=angel n=ansible | ok: [localhost] => (item=equipo)
+2026-06-25 08:06:46,944 p=43038 u=angel n=ansible | TASK [angell : Crear archivo datos_alumno] **********************************************************************************************************
+2026-06-25 08:06:47,222 p=43038 u=angel n=ansible | ok: [localhost]
+2026-06-25 08:06:47,228 p=43038 u=angel n=ansible | TASK [angell : Crear archivo datos_equipo] **********************************************************************************************************
+2026-06-25 08:06:47,431 p=43038 u=angel n=ansible | ok: [localhost]
+2026-06-25 08:06:47,437 p=43038 u=angel n=ansible | TASK [angell : Configurar sudoers para 2PSupervisores] **********************************************************************************************
+2026-06-25 08:06:47,603 p=43038 u=angel n=ansible | changed: [localhost]
+2026-06-25 08:06:47,613 p=43038 u=angel n=ansible | TASK [Otra tarea] ***********************************************************************************************************************************
+2026-06-25 08:06:47,620 p=43038 u=angel n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-25 08:06:47,620 p=43038 u=angel n=ansible | PLAY RECAP ******************************************************************************************************************************************
+2026-06-25 08:06:47,620 p=43038 u=angel n=ansible | localhost                  : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
